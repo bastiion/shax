@@ -35,7 +35,7 @@
             ${pkgs.basex}/bin/basex -b "request=shacl?shax=$1" ${shax-src}/shax.xq
           '';
         };
-        devShell = pkgs.mkShel {
+        devShell = pkgs.mkShell {
           buildInputs = with pkgs;[ basex ];
         };
         defaultPackage = packages.shax;
